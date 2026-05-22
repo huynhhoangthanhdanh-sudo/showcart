@@ -1,0 +1,134 @@
+@import "/CSS/theme.css";
+
+html {
+    font-family: 'K2D', 'Time New Roman';
+    cursor: default;
+}
+
+body {
+    background: linear-gradient(135deg, var(--y-100) 0%, var(--p-200) 50%, var(--b-200) 100%);
+    /* Căn giữa khung hình */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signin-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50vw;
+    box-shadow: 0 15px 40px hsla(0, 0%, 0%, 0.25);
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--y-100) 0%, var(--p-200) 50%, var(--b-200) 100%);
+}
+
+.signin {
+    font-size: 3em;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: hsl(230, 60%, 20%);
+    transition: 0.25s ease-in-out;
+}
+
+.typearea {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.username-description {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: hsl(0, 0%, 33%);
+    transition: 0.5s;
+}
+
+.username {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 80%);
+    font-size: 15px;
+    outline: none;
+    transition: 0.5s;
+}
+
+.username:hover {
+    border-color: var(--p-800);
+    box-shadow: 0.5px 1px 0 1.5px var(--p-600);
+    transform: translate(5px, -10px);
+}
+
+.usernamearea:hover .username-description {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 5px var(--p-700), 0px 0px 10px var(--p-800), 0px 0px 15px var(--p-900);
+    transform: translateY(-10px);
+    font-size: 30px;
+}
+
+.password-description {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: hsl(0, 0%, 33%);
+    transition: 0.5s;
+}
+
+.password {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 80%);
+    font-size: 15px;
+    outline: none;
+    transition: 0.5s;
+}
+
+.password:hover {
+    border-color: var(--b-800);
+    box-shadow: 0.5px 1px 0 1.5px var(--b-600);
+    transform: translate(5px, -10px);
+}
+
+.passwordarea:hover .password-description {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 5px var(--b-600), 0px 0px 10px var(--b-700), 0px 0px 15px var(--b-800);
+    transform: translateY(-10px);
+    font-size: 30px;
+}
+
+.Signin {
+    align-self: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 150px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, hsl(229, 76%, 66%), hsl(270, 37%, 46%));
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Signin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.25);
+}
+
+.Signin:active {
+    transform: scale(0.9);
+}
+
+.signin-box__direct {
+    font-size: 24px;
+    text-align: center;
+}

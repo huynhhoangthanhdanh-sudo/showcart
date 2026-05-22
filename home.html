@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/image/Anh2.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/CSS/home.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+    </style>
+    <title>Trang chủ</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__information">
+        <image class="header__information--logo">Logo</image>
+        <div class="header__search">
+          <input
+            id="header__search--input"
+            class="header__search--input"
+            type="text"
+            title="Tìm kiếm"
+            placeholder="Bạn muốn tìm sản phẩm nào?"
+          />
+          <button id="header__search--button" class="header__search--button">
+            <img src="/image/Anhkinhlup.png" alt="Tìm kiếm" title="Tìm kiếm" />
+          </button>
+        </div>
+        <div class="header__show-cart-area">
+          <a href="/page/show-cart.html"
+            ><img
+              class="header__show-cart-area--show-cart"
+              src="/image/Anhgiohang.png"
+              alt="Giỏ hàng"
+              title="Giỏ hàng"
+          /></a>
+          <div
+            id="header__numberInShowCart"
+            class="header__numberInShowCart"
+          ></div>
+        </div>
+        <div id="guest" class="header__information--guest">
+          <a
+            id="header__register"
+            class="header__register"
+            href="/page/register.html"
+            title="Đăng kí"
+            >Đăng kí</a
+          >
+          <a
+            id="header__login"
+            class="header__login"
+            href="/page/log_in.html"
+            title="Đăng nhập"
+            >Đăng nhập</a
+          >
+        </div>
+        <div id="user" class="header__information--user">
+          <img
+            id="header__information--avatar"
+            class="header__information--avatar"
+            src=""
+            alt="avatar"
+            title="Ảnh đại diện"
+            onclick="gotocustomer()"
+          />
+          <span
+            id="header__information--username"
+            class="header__information--username"
+            title="Tên người dùng"
+          ></span>
+          <span
+            id="header__information--logout"
+            class="header__information--logout"
+            title="Đăng xuất"
+            onclick="logout()"
+          >
+            Đăng xuất
+          </span>
+        </div>
+      </nav>
+    </header>
+    <div class="product__detail" id="product__detail">
+      <p
+        id="product__detail--close"
+        class="product__detail--close"
+        title="Thoát"
+        onclick="closedetail()"
+      >
+        &#10005;
+      </p>
+      <div class="product__detail--detail">
+        <p id="detail__id" class="detail">Mã SP: E01</p>
+        <p id="detail__name" class="detail">Tên SP: Samsung Galaxy S26 Ultra</p>
+        <p id="detail__rate" class="detail">Đánh giá người dùng: 5.0</p>
+        <p id="detail__price" class="detail">Giá tiền: 24.392.000 VNĐ</p>
+        <p id="detail__status" class="detail">Trạng thái: Còn hàng</p>
+        <p id="detail__add-to-cart" class="detail__add-to-cart">
+          <img
+            id="detail__add-to-cart--img"
+            class="detail__add-to-cart--img"
+            src="/image/Anhaddtocart.png"
+          />
+          Thêm vào giỏ hàng
+        </p>
+      </div>
+    </div>
+    <div class="shop">
+      <div class="shop__product-type">
+        <p class="shop__product-type--title">Loại sản phẩm</p>
+        <div class="shop__product-type--number">
+          <p id="typeE" class="type-1">
+            1&#41; Thiết bị điện tử &#40;<b
+              id="numberOfElectronicDevices"
+              class="numberOfProduct"
+            ></b
+            >&#41;
+          </p>
+          <p id="typeC" class="type-2">
+            2&#41; Quần áo &#40;<b
+              id="numberOfClothes"
+              class="numberOfProduct"
+            ></b
+            >&#41;
+          </p>
+          <p id="typeS" class="type-3">
+            3&#41; Dụng cụ thể thao &#40;<b
+              id="numberOfSportEquipments"
+              class="numberOfProduct"
+            ></b
+            >&#41;
+          </p>
+          <p id="typeB" class="type-4">
+            4&#41; Sách &#40;<b id="numberOfBooks" class="numberOfProduct"></b
+            >&#41;
+          </p>
+        </div>
+        <div id="clock" class="clock"></div>
+      </div>
+      <div class="shop__product">
+        <div id="E01" class="product">
+          <img
+            id="E01__image"
+            class="productimage"
+            src=""
+            alt="SamsungGalaxyS26Ultra"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E01__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E01__price--discount" class="price--discount"></span>
+            <span id="E01__partition">&#124;</span>
+            <span id="E01__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E01__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E02" class="product">
+          <img
+            id="E02__image"
+            class="productimage"
+            src=""
+            alt="OppoFindX9s"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E02__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E02__price--discount" class="price--discount"></span>
+            <span id="E02__partition">&#124;</span>
+            <span id="E02__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E02__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E03" class="product">
+          <img
+            id="E03__image"
+            class="productimage"
+            src=""
+            alt="LenovoYogaTab"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E03__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E03__price--discount" class="price--discount"></span>
+            <span id="E03__partition">&#124;</span>
+            <span id="E03__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E03__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E04" class="product">
+          <img
+            id="E04__image"
+            class="productimage"
+            src=""
+            alt="XiaomiPadMini"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E04__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E04__price--discount" class="price--discount"></span>
+            <span id="E04__partition">&#124;</span>
+            <span id="E04__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E04__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E05" class="product">
+          <img
+            id="E05__image"
+            class="productimage"
+            src=""
+            alt="LaptopASUSVivobookS14FLIP"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E05__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E05__price--discount" class="price--discount"></span>
+            <span id="E05__partition">&#124;</span>
+            <span id="E05__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E05__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E06" class="product">
+          <img
+            id="E06__image"
+            class="productimage"
+            src=""
+            alt="LaptopOmniBook7"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E06__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E06__price--discount" class="price--discount"></span>
+            <span id="E06__partition">&#124;</span>
+            <span id="E06__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E06__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E07" class="product">
+          <img
+            id="E07__image"
+            class="productimage"
+            src=""
+            alt="LaptopAcerGamingNitroLite16"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E07__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E07__price--discount" class="price--discount"></span>
+            <span id="E07__partition">&#124;</span>
+            <span id="E07__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E07__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E08" class="product">
+          <img
+            id="E08__image"
+            class="productimage"
+            src=""
+            alt="SmartTiviSamSungQLED"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E08__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E08__price--discount" class="price--discount"></span>
+            <span id="E08__partition">&#124;</span>
+            <span id="E08__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E08__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E09" class="product">
+          <img
+            id="E09__image"
+            class="productimage"
+            src=""
+            alt="SmartTiViSamsungUHD"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E09__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E09__price--discount" class="price--discount"></span>
+            <span id="E09__partition">&#124;</span>
+            <span id="E09__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E09__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="E10" class="product">
+          <img
+            id="E10__image"
+            class="productimage"
+            src=""
+            alt="SmartTiviLGUHD"
+            onclick="productdetail(this.id)"
+          />
+          <p id="E10__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="E10__price--discount" class="price--discount"></span>
+            <span id="E10__partition">&#124;</span>
+            <span id="E10__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="E10__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C01" class="product">
+          <img
+            id="C01__image"
+            class="productimage"
+            src=""
+            alt="ManCityHomeKit"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C01__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C01__price--discount" class="price--discount"></span>
+            <span id="C01__partition">&#124;</span>
+            <span id="C01__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C01__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C02" class="product">
+          <img
+            id="C02__image"
+            class="productimage"
+            src=""
+            alt="InterMiami"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C02__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C02__price--discount" class="price--discount"></span>
+            <span id="C02__partition">&#124;</span>
+            <span id="C02__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C02__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C03" class="product">
+          <img
+            id="C03__image"
+            class="productimage"
+            src=""
+            alt="ParisSaintGerman"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C03__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C03__price--discount" class="price--discount"></span>
+            <span id="C03__partition">&#124;</span>
+            <span id="C03__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C03__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C04" class="product">
+          <img
+            id="C04__image"
+            class="productimage"
+            src=""
+            alt="Barcalona"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C04__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C04__price--discount" class="price--discount"></span>
+            <span id="C04__partition">&#124;</span>
+            <span id="C04__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C04__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C05" class="product">
+          <img
+            id="C05__image"
+            class="productimage"
+            src=""
+            alt="RealMadrid"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C05__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C05__price--discount" class="price--discount"></span>
+            <span id="C05__partition">&#124;</span>
+            <span id="C05__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C05__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C06" class="product">
+          <img
+            id="C06__image"
+            class="productimage"
+            src=""
+            alt="AleticoMadrid"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C06__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C06__price--discount" class="price--discount"></span>
+            <span id="C06__partition">&#124;</span>
+            <span id="C06__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C06__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C07" class="product">
+          <img
+            id="C07__image"
+            class="productimage"
+            src=""
+            alt="ManchesterUnited"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C07__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C07__price--discount" class="price--discount"></span>
+            <span id="C07__partition">&#124;</span>
+            <span id="C07__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C07__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C08" class="product">
+          <img
+            id="C08__image"
+            class="productimage"
+            src=""
+            alt="Arsenal"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C08__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C08__price--discount" class="price--discount"></span>
+            <span id="C08__partition">&#124;</span>
+            <span id="C08__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C08__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C09" class="product">
+          <img
+            id="C09__image"
+            class="productimage"
+            src=""
+            alt="Chelsea"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C09__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C09__price--discount" class="price--discount"></span>
+            <span id="C09__partition">&#124;</span>
+            <span id="C09__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C09__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="C10" class="product">
+          <img
+            id="C10__image"
+            class="productimage"
+            src=""
+            alt="BayernMunich"
+            onclick="productdetail(this.id)"
+          />
+          <p id="C10__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="C10__price--discount" class="price--discount"></span>
+            <span id="C10__partition">&#124;</span>
+            <span id="C10__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="C10__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S01" class="product">
+          <img
+            id="S01__image"
+            class="productimage"
+            src=""
+            alt="Football"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S01__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S01__price--discount" class="price--discount"></span>
+            <span id="S01__partition">&#124;</span>
+            <span id="S01__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S01__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S02" class="product">
+          <img
+            id="S02__image"
+            class="productimage"
+            src=""
+            alt="Volleyball"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S02__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S02__price--discount" class="price--discount"></span>
+            <span id="S02__partition">&#124;</span>
+            <span id="S02__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S02__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S03" class="product">
+          <img
+            id="S03__image"
+            class="productimage"
+            src=""
+            alt="Badminton"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S03__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S03__price--discount" class="price--discount"></span>
+            <span id="S03__partition">&#124;</span>
+            <span id="S03__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S03__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S04" class="product">
+          <img
+            id="S04__image"
+            class="productimage"
+            src=""
+            alt="Shuttlecock"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S04__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S04__price--discount" class="price--discount"></span>
+            <span id="S04__partition">&#124;</span>
+            <span id="S04__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S04__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S05" class="product">
+          <img
+            id="S05__image"
+            class="productimage"
+            src=""
+            alt="GoalkeeperHand"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S05__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S05__price--discount" class="price--discount"></span>
+            <span id="S05__partition">&#124;</span>
+            <span id="S05__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S05__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S06" class="product">
+          <img
+            id="S06__image"
+            class="productimage"
+            src=""
+            alt="Basketball"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S06__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S06__price--discount" class="price--discount"></span>
+            <span id="S06__partition">&#124;</span>
+            <span id="S06__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S06__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S07" class="product">
+          <img
+            id="S07__image"
+            class="productimage"
+            src=""
+            alt="Pickleball"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S07__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S07__price--discount" class="price--discount"></span>
+            <span id="S07__partition">&#124;</span>
+            <span id="S07__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S07__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S08" class="product">
+          <img
+            id="S08__image"
+            class="productimage"
+            src=""
+            alt="ShuttlecockKicking"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S08__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S08__price--discount" class="price--discount"></span>
+            <span id="S08__partition">&#124;</span>
+            <span id="S08__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S08__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="S09" class="product">
+          <img
+            id="S09__image"
+            class="productimage"
+            src=""
+            alt="CauMay"
+            onclick="productdetail(this.id)"
+          />
+          <p id="S09__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="S09__price--discount" class="price--discount"></span>
+            <span id="S09__partition">&#124;</span>
+            <span id="S09__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="S09__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B01" class="product">
+          <img
+            id="B01__image"
+            class="productimage"
+            src=""
+            alt="HarryPotter1"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B01__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B01__price--discount" class="price--discount"></span>
+            <span id="B01__partition">&#124;</span>
+            <span id="B01__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B01__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B02" class="product">
+          <img
+            id="B02__image"
+            class="productimage"
+            src=""
+            alt="HarryPotter2"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B02__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B02__price--discount" class="price--discount"></span>
+            <span id="B02__partition">&#124;</span>
+            <span id="B02__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B02__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B03" class="product">
+          <img
+            id="B03__image"
+            class="productimage"
+            src=""
+            alt="HarryPotter3"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B03__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B03__price--discount" class="price--discount"></span>
+            <span id="B03__partition">&#124;</span>
+            <span id="B03__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B03__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B04" class="product">
+          <img
+            id="B04__image"
+            class="productimage"
+            src=""
+            alt="HarryPotter4"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B04__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B04__price--discount" class="price--discount"></span>
+            <span id="B04__partition">&#124;</span>
+            <span id="B04__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B04__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B05" class="product">
+          <img
+            id="B05__image"
+            class="productimage"
+            src=""
+            alt="HarryPotter5"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B05__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B05__price--discount" class="price--discount"></span>
+            <span id="B05__partition">&#124;</span>
+            <span id="B05__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B05__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B06" class="product">
+          <img
+            id="B06__image"
+            class="productimage"
+            src=""
+            alt="HarryPotter6"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B06__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B06__price--discount" class="price--discount"></span>
+            <span id="B06__partition">&#124;</span>
+            <span id="B06__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B06__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B07" class="product">
+          <img
+            id="B07__image"
+            class="productimage"
+            src=""
+            alt="HarryPotter7"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B07__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B07__price--discount" class="price--discount"></span>
+            <span id="B07__partition">&#124;</span>
+            <span id="B07__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B07__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B08" class="product">
+          <img
+            id="B08__image"
+            class="productimage"
+            src=""
+            alt="Tôi thấy hoa vàng trên cỏ xanh"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B08__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B08__price--discount" class="price--discount"></span>
+            <span id="B08__partition">&#124;</span>
+            <span id="B08__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B08__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B09" class="product">
+          <img
+            id="B09__image"
+            class="productimage"
+            src=""
+            alt="Mắt biếc"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B09__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B09__price--discount" class="price--discount"></span>
+            <span id="B09__partition">&#124;</span>
+            <span id="B09__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B09__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B10" class="product">
+          <img
+            id="B10__image"
+            class="productimage"
+            src=""
+            alt="Ra bờ suối ngắm hoa kèn hồng"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B10__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B10__price--discount" class="price--discount"></span>
+            <span id="B10__partition">&#124;</span>
+            <span id="B10__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B10__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+        <div id="B11" class="product">
+          <img
+            id="B11__image"
+            class="productimage"
+            src=""
+            alt="SherlockHolmes"
+            onclick="productdetail(this.id)"
+          />
+          <p id="B11__name" class="product__name"></p>
+          <div class="product__price">
+            <span id="B11__price--discount" class="price--discount"></span>
+            <span id="B11__partition">&#124;</span>
+            <span id="B11__price--listprice" class="price--listprice"></span>
+          </div>
+          <p class="add-to-cart">
+            <img
+              id="B11__add-to-cart"
+              class="add-to-cart--img"
+              src="/image/Anhaddtocart.png"
+            />
+            Thêm vào giỏ hàng
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/Product.js" defer></script>
+    <script src="./JS/clock.js" defer></script>
+    <script src="./JS/Customer.js" defer></script>
+  </body>
+</html>

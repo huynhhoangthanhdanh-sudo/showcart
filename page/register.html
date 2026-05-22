@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng kí</title>
+    <link rel="icon" href="/image/Anh2.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/CSS/register.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="register-box">
+      <p class="register-box__title">Đăng kí</p>
+      <div class="register-box__typearea">
+        <div class="register-box__typearea--fullname">
+          <label class="fullname-title">Nhập họ tên</label>
+          <input
+            id="fullname"
+            class="fullname"
+            type="text"
+            maxlength="30"
+            title="Họ và tên"
+            placeholder="Nguyễn Văn A"
+            required
+          />
+          <p id="fullname-alert" class="alert"></p>
+        </div>
+        <div class="register-box__typearea--username">
+          <label class="username-title">Nhập tên đăng nhập</label>
+          <input
+            id="username"
+            class="username"
+            type="text"
+            maxlength="30"
+            title="Tên đăng nhập"
+            placeholder="Tên đăng nhập (tối đa 30 ký tự và không có ký tự đặc biệt)"
+            required
+          />
+          <p id="username-alert" class="alert"></p>
+        </div>
+        <div class="register-box__typearea--password">
+          <label class="password-title">Nhập mật khẩu</label>
+          <input
+            id="password"
+            class="password"
+            type="password"
+            title="Mật khẩu"
+            placeholder="Nhập mật khẩu"
+            required
+          />
+          <p id="password-alert" class="alert"></p>
+        </div>
+        <div class="register-box__typearea--confirmpassword">
+          <label class="confirmpassword-title">Xác nhận mật khẩu</label>
+          <input
+            id="confirmpassword"
+            class="confirmpassword"
+            type="password"
+            title="Xác nhận mật khẩu"
+            placeholder="Xác nhận mật khẩu"
+            required
+          />
+          <p id="confirmpassword-alert" class="alert"></p>
+        </div>
+      </div>
+      <button id="register" class="register" title="Đăng kí">Đăng kí</button>
+      <p class="register-box__direct">
+        Đã có tài khoản, <a href="/page/log_in.html">Đăng nhập</a>
+      </p>
+    </div>
+    <script src="/JS/register.js" defer></script>
+  </body>
+</html>

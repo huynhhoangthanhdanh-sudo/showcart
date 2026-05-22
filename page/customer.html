@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin người dùng</title>
+    <link rel="icon" href="/image/Anh2.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="/CSS/customer.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__home" href="/home.html" title="Quay về trang chủ"
+        >&#10140;</a
+      >
+      <p class="header__paragraph">
+        Welcome,&nbsp;<i id="username" class="header__paragraph--username"></i>
+      </p>
+      <img id="avatar" class="header__avatar" src="" title="Avatar" />
+      <label for="avatar-change">Thay đổi ảnh đại diện</label>
+      <input
+        id="avatar-change"
+        class="header__avatar--change"
+        type="file"
+        accept="image/*"
+        onchange="changeavatar(event)"
+      />
+    </header>
+    <section class="user-information">
+      <p class="user-information__title">Thông tin người dùng</p>
+      <div class="user-information__name">
+        <p
+          id="user-information__name--fullname"
+          class="user-information__name--fullname"
+        ></p>
+        <button
+          id="changename"
+          class="change-information--button"
+          title="Chỉnh sửa"
+        >
+          &#9998;
+        </button>
+        <div class="change-information__fullname">
+          <input
+            id="change-information__fullname"
+            type="text"
+            maxlength="30"
+            title="Nhập họ tên"
+          />
+          <button id="change-information__fullname--close" class="close">
+            &#10005;
+          </button>
+          <button id="change-information__fullname--agree" class="agree">
+            &#10003;
+          </button>
+        </div>
+      </div>
+      <div class="user-information__username">
+        <p
+          id="user-information__username--username"
+          class="user-information__username--username"
+        ></p>
+        <button
+          id="changeusername"
+          class="change-information--button"
+          title="Chỉnh sửa"
+        >
+          &#9998;
+        </button>
+        <div class="change-information__username">
+          <input
+            id="change-information__username"
+            type="text"
+            maxlength="30"
+            title="Nhập tên đăng nhập"
+          />
+          <button id="change-information__username--close" class="close">
+            &#10005;
+          </button>
+          <button id="change-information__username--agree" class="agree">
+            &#10003;
+          </button>
+        </div>
+      </div>
+      <div class="user-information__phone">
+        <p
+          id="user-information__phone--phonenumber"
+          class="user-information__phone--phonenumber"
+        ></p>
+        <button
+          id="changephonenumber"
+          class="change-information--button"
+          title="Chỉnh sửa"
+        >
+          &#9998;
+        </button>
+        <div class="change-information__phonenumber">
+          <input
+            id="change-information__phonenumber"
+            type="text"
+            maxlength="12"
+            title="Nhập số điện thoại"
+          />
+          <button id="change-information__phonenumber--close" class="close">
+            &#10005;
+          </button>
+          <button id="change-information__phonenumber--agree" class="agree">
+            &#10003;
+          </button>
+        </div>
+      </div>
+      <div class="user-information__email">
+        <p
+          id="user-information__email--mail"
+          class="user-information__email--mail"
+        ></p>
+        <button
+          id="changeemail"
+          class="change-information--button"
+          title="Chỉnh sửa"
+        >
+          &#9998;
+        </button>
+        <div class="change-information__email">
+          <input
+            id="change-information__email"
+            type="email"
+            title="Nhập email"
+          />
+          <button id="change-information__email--close" class="close">
+            &#10005;
+          </button>
+          <button id="change-information__email--agree" class="agree">
+            &#10003;
+          </button>
+        </div>
+      </div>
+      <div class="user-information__birthandsex">
+        <div class="user-information__birth">
+          <p
+            id="user-information__birth--birthday"
+            class="user-information__birth--birthday"
+          ></p>
+          <button
+            id="changebirthday"
+            class="change-information--button"
+            title="Chỉnh sửa"
+          >
+            &#9998;
+          </button>
+          <div class="change-information__birthday">
+            <input
+              id="change-information__birthday"
+              type="date"
+              title="Chọn ngày sinh"
+            />
+            <button id="change-information__birthday--close" class="close">
+              &#10005;
+            </button>
+            <button id="change-information__birthday--agree" class="agree">
+              &#10003;
+            </button>
+          </div>
+        </div>
+        <div class="user-information__sex">
+          <p
+            id="user-information__sex--sex"
+            class="user-information__sex--sex"
+          ></p>
+          <button
+            id="changesex"
+            class="change-information--button"
+            title="Chỉnh sửa"
+          >
+            &#9998;
+          </button>
+          <div class="change-information__sex">
+            <input
+              id="change-information__sex"
+              type="text"
+              title="Nhập giới tính"
+            />
+            <button id="change-information__sex--close" class="close">
+              &#10005;
+            </button>
+            <button id="change-information__sex--agree" class="agree">
+              &#10003;
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/JS/updatedinformation.js" defer></script>
+  </body>
+</html>

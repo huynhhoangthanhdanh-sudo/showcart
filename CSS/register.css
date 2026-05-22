@@ -1,0 +1,155 @@
+@import "/CSS/theme.css";
+
+html {
+    font-family: 'K2D', 'Time New Roman';
+    cursor: default;
+}
+
+body {
+    background: linear-gradient(135deg, var(--y-100) 0%, var(--p-200) 50%, var(--b-200) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50vw;
+    box-shadow: 0 15px 40px hsla(0, 0%, 0%, 0.25);
+    border-radius: 25px;
+    background: linear-gradient(135deg, var(--y-100) 0%, var(--p-200) 50%, var(--b-200) 100%);
+}
+
+.register-box__title {
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: hsl(230, 60%, 20%);
+    transition: 0.25s;
+}
+
+.register-box__typearea {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.register-box__typearea--fullname .fullname-title,
+.register-box__typearea--username .username-title,
+.register-box__typearea--password .password-title,
+.register-box__typearea--confirmpassword .confirmpassword-title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: hsl(0, 0%, 33%);
+    transition: 0.5s;
+}
+
+.register-box__direct {
+    font-size: 24px;
+    text-align: center;
+}
+
+.fullname,
+.username,
+.password,
+.confirmpassword {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 80%);
+    font-size: 15px;
+    outline: none;
+    transition: 0.5s;
+}
+
+.fullname:hover {
+    border-color: var(--p-800);
+    box-shadow: 0.5px 1px 0 1.5px var(--p-600);
+    transform: translate(5px, -10px);
+}
+
+.register-box__typearea--fullname:hover .fullname-title {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 5px var(--p-700), 0px 0px 10px var(--p-800), 0px 0px 15px var(--p-900);
+    transform: translateY(-10px);
+    font-size: 30px;
+}
+
+.username:hover {
+    border-color: var(--y-800);
+    box-shadow: 0.5px 1px 0 1.5px var(--y-600);
+    transform: translate(5px, -10px);
+}
+
+.register-box__typearea--username:hover .username-title {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 5px var(--y-700), 0px 0px 10px var(--y-800), 0px 0px 15px var(--y-900);
+    transform: translateY(-10px);
+    font-size: 30px;
+}
+
+.password:hover {
+    border-color: var(--b-800);
+    box-shadow: 0.5px 1px 0 1.5px var(--b-600);
+    transform: translate(5px, -10px);
+}
+
+.register-box__typearea--password:hover .password-title {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 5px var(--b-700), 0px 0px 10px var(--b-800), 0px 0px 15px var(--b-900);
+    transform: translateY(-10px);
+    font-size: 30px;
+}
+
+.confirmpassword:hover {
+    border-color: hsl(0, 0%, 100%);
+    box-shadow: 0.5px 1px 0 1.5px var(--b-500);
+    transform: translate(5px, -10px);
+}
+
+.register-box__typearea--confirmpassword:hover .confirmpassword-title {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0px 0px 5px var(--b-300), 0px 0px 10px var(--b-400), 0px 0px 15px var(--b-500);
+    transform: translateY(-10px);
+    font-size: 30px;
+}
+
+.alert {
+    color: hsl(0, 75%, 42%);
+    margin: 5px;
+    width: fit-content;
+    height: fit-content;
+    display: none;
+}
+
+.register {
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 150px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, hsl(229, 76%, 66%), hsl(270, 37%, 46%));
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.25);
+}
+
+.register:active {
+    transform: scale(0.9);
+}
