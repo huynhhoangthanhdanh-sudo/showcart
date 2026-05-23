@@ -8,7 +8,11 @@ function addavatar() {
   const userData = JSON.parse(window.localStorage.getItem("currentUser"));
   if (userData) {
     const username = userData.username;
-    avatar.src = userData.avatar;
+    let avatarPath = userData.avatar;
+    if(!avatarPath.startsWith("data:") && window.location.pathname.includes("/page/")){
+      avatarPath = "../" + avatarPath;
+    }
+    avatar.src = avatarPath;
     guest.style.display = "none";
     user.style.display = "flex";
     clientusername.textContent = username;
