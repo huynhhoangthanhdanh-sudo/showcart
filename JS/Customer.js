@@ -19,7 +19,7 @@ function addavatar() {
 }
 document.addEventListener("DOMContentLoaded", addavatar);
 function logout() {
-  window.location.href = "#";
+  window.location.href = "home.html";
   window.localStorage.removeItem("currentUser");
 }
 function gotocustomer() {
