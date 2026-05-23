@@ -14,7 +14,6 @@ function checkUser(str, userlist) {
   }
 }
 
-//Đăng kí
 function register() {
   const fullname = document.getElementById("fullname").value;
   const username = document.getElementById("username").value;
@@ -85,7 +84,7 @@ function register() {
         birth: birth,
         sex: sex,
         password: password,
-        avatar: "../image/avatardefault.jpg",
+        avatar: "image/avatardefault.jpg",
       };
       userlist.push(registerData);
       window.localStorage.setItem("userlist", JSON.stringify(userlist));
