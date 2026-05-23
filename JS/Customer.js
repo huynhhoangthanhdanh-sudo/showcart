@@ -8,7 +8,7 @@ function addavatar() {
   const userData = JSON.parse(window.localStorage.getItem("currentUser"));
   if (userData) {
     const username = userData.username;
-    avatar.src = "../" + userData.avatar;
+    avatar.src = "page/" + userData.avatar;
     guest.style.display = "none";
     user.style.display = "flex";
     clientusername.textContent = username;
@@ -19,7 +19,7 @@ function addavatar() {
 }
 document.addEventListener("DOMContentLoaded", addavatar);
 function logout() {
-  window.location.href = "../home.html";
+  window.location.href = "home.html";
   window.localStorage.removeItem("currentUser");
 }
 function gotocustomer() {
