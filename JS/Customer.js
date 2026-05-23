@@ -8,7 +8,11 @@ function addavatar() {
   const userData = JSON.parse(window.localStorage.getItem("currentUser"));
   if (userData) {
     const username = userData.username;
-    avatar.src = "page/" + userData.avatar;
+    let avatarPath = userData.avatar;
+    if(window.location.pathname.includes("/page/")){
+      avatarPath = "../" + avatarPath;
+    }
+    avatar.src = avatarPath;
     guest.style.display = "none";
     user.style.display = "flex";
     clientusername.textContent = username;
@@ -19,7 +23,7 @@ function addavatar() {
 }
 document.addEventListener("DOMContentLoaded", addavatar);
 function logout() {
-  window.location.href = "home.html";
+  window.location.href = "#";
   window.localStorage.removeItem("currentUser");
 }
 function gotocustomer() {
