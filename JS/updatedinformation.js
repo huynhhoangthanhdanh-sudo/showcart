@@ -203,7 +203,11 @@ function updatedinformation() {
     "change-information__sex",
   )[0];
 
-  avatar.src = userData.avatar;
+  let avatarPath = userData.avatar;
+  if(window.location.pathname.includes("/page/")){
+    avatarPath = "../" + avatarPath;
+  }
+  avatar.src = avatarPath;
   fullname.textContent = "Họ tên: " + userData.fullname;
   username.textContent = "Tên đăng nhập: " + userData.username;
   welcomeuser.textContent = userData.username;
