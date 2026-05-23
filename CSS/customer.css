@@ -1,4 +1,4 @@
-@import "/CSS/theme.css";
+@import "../CSS/theme.css";
 
 * {
     box-sizing: border-box;

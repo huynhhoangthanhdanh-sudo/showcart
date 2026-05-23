@@ -22,7 +22,7 @@ function signin() {
     if (user) {
       window.localStorage.setItem("currentUser", JSON.stringify(user));
       alert("Chào mừng " + user.username + "!!!");
-      window.location.href = "/home.html";
+      window.location.href = "../home.html";
     } else {
       alert("Thông tin chưa đúng!!");
     }

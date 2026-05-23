@@ -19,9 +19,9 @@ function addavatar() {
 }
 document.addEventListener("DOMContentLoaded", addavatar);
 function logout() {
-  window.location.href = "/home.html";
+  window.location.href = "../home.html";
   window.localStorage.removeItem("currentUser");
 }
 function gotocustomer() {
-  window.location.href = "/page/customer.html";
+  window.location.href = "../page/customer.html";
 }

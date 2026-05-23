@@ -85,13 +85,13 @@ function register() {
         birth: birth,
         sex: sex,
         password: password,
-        avatar: "/image/avatardefault.jpg",
+        avatar: "../image/avatardefault.jpg",
       };
       userlist.push(registerData);
       window.localStorage.setItem("userlist", JSON.stringify(userlist));
       window.localStorage.setItem("currentUser", JSON.stringify(registerData));
       alert("Bạn đã đăng ký thành công!!");
-      window.location.href = "/home.html";
+      window.location.href = "../home.html";
     }
   }
 }
